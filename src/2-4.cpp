@@ -1,16 +1,19 @@
 #include <iostream>
 
 namespace Parent {
-	namespace V1 {
-	void foo() { std::cout << "foo v1.0" << std::endl; }
-	}
-
-	inline namespace V2 {
-		void foo() { std::cout << "foo v2.0" << std::endl; }
-	}
+namespace V1 {
+void foo() {
+    std::cout << "foo v1.0" << std::endl;
 }
+} // namespace V1
 
-int main()
-{
-	Parent::foo();
+inline namespace V2 {
+void foo() {
+    std::cout << "foo v2.0" << std::endl;
+}
+} // namespace V2
+} // namespace Parent
+
+int main() {
+    Parent::foo();
 }
