@@ -2,8 +2,10 @@
 #include <ostream>
 #include <stdio.h>
 #include <vector>
+
 template <class T> void foo(std::vector<T> &&t) {
 }
+
 class BigMemoryPool {
   public:
     static const int PoolSize = 4096;
@@ -42,5 +44,5 @@ void move_pool(BigMemoryPool &&pool) {
 int main() {
     std::vector<int> v{1, 2, 3};
     move_pool(make_pool());
-    // foo(v); // 编译错误
+    // foo(v); // 编译错误, 左值不能作为右值
 }
