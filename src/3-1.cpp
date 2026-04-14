@@ -16,7 +16,7 @@ int main() {
     // int &j = i;
     // auto m = j; // m是int类型
 
-    auto x1 = {1, 2};
+    auto x1 = {1, 2}; // initializer_list 是一个指针
     // auto x2 = {1, 2.0}; // 编译失败
     // auto x3{1, 2}; // 编译失败，auto不能推断为std::initializer_list<int>
     auto x4 = {3};

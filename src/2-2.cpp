@@ -1,20 +1,30 @@
 #include <iostream>
 
-namespace Parent {
-namespace Child1 {
+namespace parent {
+namespace child1 {
 void foo() {
-    std::cout << "Child1::foo()" << std::endl;
+    std::cout << "foo v1.0" << std::endl;
 }
-} // namespace Child1
+} // namespace child1
+} // namespace parent
+// namespace parent
 
-inline namespace Child2 {
+namespace parent1 {
+inline namespace child2 {
 void foo() {
-    std::cout << "Child2::foo()" << std::endl;
+    std::cout << "foo v2.0" << std::endl;
 }
-} // namespace Child2
-} // namespace Parent
+} // namespace child2
+} // namespace parent1
 
-int main() {
-    Parent::Child1::foo();
-    Parent::foo();
+namespace parent3::inline child {
+void foo() {
+    std::cout << "foo v3.0" << std::endl;
+}
+} // namespace parent3::inline child
+int main(int argc, char *argv[]) {
+    parent::child1::foo();
+    parent1::foo();
+    parent3::child::foo();
+    parent3::foo();
 }

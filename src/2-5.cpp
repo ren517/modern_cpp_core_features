@@ -5,7 +5,7 @@ int foo() {
 } // namespace A::B::inline C
 // 或者
 namespace A::inline B::C {
-int foo() {
+int foo0() {
     return 5;
 }
 } // namespace A::inline B::C
@@ -14,7 +14,7 @@ int foo() {
 
 namespace A::B {
 inline namespace C {
-int foo() {
+int foo1() {
     return 5;
 }
 } // namespace C
@@ -23,7 +23,7 @@ int foo() {
 namespace A {
 inline namespace B {
 namespace C {
-int foo() {
+int foo2() {
     return 5;
 }
 } // namespace C

@@ -10,7 +10,7 @@ if (NOT CMAKE_BUILD_TYPE)
 endif ()
 
 # 3. 设置 C++ 标准
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -28,7 +28,8 @@ foreach (source_file ${SOURCE_FILES})
     get_filename_component(filename ${source_file} NAME_WE)
 
     # 创建可执行文件
-    add_executable(${filename} ${source_file})
+    add_executable(${filename} ${source_file}
+            test.cpp)
 
     # 设置输出目录
     set_target_properties(${filename} PROPERTIES
