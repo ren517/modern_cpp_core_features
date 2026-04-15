@@ -3,10 +3,10 @@
 #include <vector>
 
 union U {
-    U() : x3() {
+    U() : x4() {
     } // 存在非平凡类型成员，必须提供构造函数
     ~U() {
-        x3.~basic_string();
+        x4.~vector();
     } // 存在非平凡类型成员，必须提供析构函数
     int x1;
     float x2;
