@@ -3,7 +3,8 @@
 enum class HighSchool {
     student,
     teacher,
-    principal
+    principal,
+    headmaster
 };
 
 enum class University {
@@ -12,10 +13,11 @@ enum class University {
     principal
 };
 
-int main()
-{
+int main() {
     HighSchool x = HighSchool::student;
     University y = University::student;
     bool b = x < HighSchool::headmaster;
+    HighSchool c = HighSchool::headmaster;
+    std::cout << (x > c) << std::endl;
     std::cout << std::boolalpha << b << std::endl;
 }

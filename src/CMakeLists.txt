@@ -1,5 +1,5 @@
 # 建议版本：VS2019/2022 默认支持 3.15+，如果是老版本 VS 请改回 3.8
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.28)
 
 # 1. 定义项目
 project(ModernCppExamples LANGUAGES CXX)
@@ -28,8 +28,7 @@ foreach (source_file ${SOURCE_FILES})
     get_filename_component(filename ${source_file} NAME_WE)
 
     # 创建可执行文件
-    add_executable(${filename} ${source_file}
-            test.cpp)
+    add_executable(${filename} ${source_file})
 
     # 设置输出目录
     set_target_properties(${filename} PROPERTIES

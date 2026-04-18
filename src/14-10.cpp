@@ -1,6 +1,6 @@
-enum Color3 {};
+enum class Color3 {
+};
 
-int main()
-{
-	Color3 c{ 7 };
+int main() {
+    Color3 c{7};
 }

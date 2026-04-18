@@ -13,8 +13,18 @@
       "variables": [
         {
           "name": "CMAKE_MAKE_PROGRAM",
-          "value": "C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+          "value": "ninja",
           "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "g++",
+          "type": "FILEPATH"
+        },
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-std=c++23",
+          "type": "STRING"
         }
       ]
     }
