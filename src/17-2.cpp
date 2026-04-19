@@ -1,19 +1,20 @@
 #include <vector>
-struct X
-{
+#include <iostream>
+
+struct X {
 	X() { std::cout << "default ctor" << std::endl; }
-	X(const X& other) {
+
+	X(const X &other) {
 		std::cout << "copy ctor" << std::endl;
 	}
 };
 
-int main()
-{
+int main() {
 	std::vector<X> x(10);
 	std::cout << "for (auto n : x)" << std::endl;
-	for (auto n : x) {
+	for (auto n: x) {
 	}
 	std::cout << "for (const auto &n : x)" << std::endl;
-	for (const auto &n : x) {
+	for (const auto &n: x) {
 	}
 }

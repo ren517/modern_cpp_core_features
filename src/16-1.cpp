@@ -9,7 +9,7 @@ public:
 	virtual void bar() const {
 	}
 
-	void baz() {
+	virtual void baz() {
 	}
 };
 
@@ -18,12 +18,12 @@ public:
 	virtual void some_func() {
 	}
 
-	virtual void foo(int &x) {
+	virtual void foo(int x) override {
 	}
 
-	virtual void bar() {
+	virtual void bar() const override {
 	}
 
-	virtual void baz() {
+	virtual void baz() override {
 	}
 };
