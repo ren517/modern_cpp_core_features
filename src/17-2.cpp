@@ -10,7 +10,7 @@ struct X {
 };
 
 int main() {
-	std::vector<X> x(10);
+	std::vector<X> x(10); // 十个X
 	std::cout << "for (auto n : x)" << std::endl;
 	for (auto n: x) {
 	}
