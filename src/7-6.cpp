@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
     int x = 5, y = 8;
     auto foo = [x, &y]() mutable {
         x += 1;
