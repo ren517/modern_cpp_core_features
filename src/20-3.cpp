@@ -1,14 +1,13 @@
 #include <iostream>
 #include <string>
 
-struct BindTest {
-	int a = 42;
-	std::string b = "hello structured binding";
+struct R {
+    int a = 10;
+    std::string b = "HelloWorld";
 };
 
-int main()
-{
-	BindTest bt;
-	auto[x, y] = bt;
-	std::cout << "x=" << x << " y=" << y << std::endl;
+int main(int argc, char *argv[]) {
+    R r;
+    auto [x, y] = r;
+    std::cout << std::format("x = {}\ny = {}", x, y);
 }

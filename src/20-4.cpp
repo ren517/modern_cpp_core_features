@@ -1,16 +1,20 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <string>
 
-struct BindTest {
-	int a = 42;
-	std::string b = "hello structured binding";
+struct R {
+    int a = 10;
+    std::string b = "Helloworld";
 };
 
-int main()
-{
-	std::vector<BindTest> bt{ {11, "hello"},  {7, "c++"},  {42, "world"} };
-	for (const auto& [x, y] : bt) {
-		std::cout << "x=" << x << " y=" << y << std::endl;
-	}
+int main(int argc, char *argv[]) {
+    std::vector<R> my_r{{10, "aaa"}, {11, "bbb"}, {12, "ccc"}};
+    for (auto &[a, b]: my_r) {
+        a += 100;
+        b += "ddd";
+    }
+
+    for (const auto &[a, b]: my_r) {
+        std::cout << std::format("a = {}\nb = {}\n", a, b);
+    }
 }

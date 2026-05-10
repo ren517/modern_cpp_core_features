@@ -30,18 +30,18 @@ namespace std {
 
 
 template<std::size_t Idx>
-auto& get(BindTest3 &bt) = delete;
+auto &get(BindTest3 &bt) = delete;
 
 template<>
-auto& get<0>(BindTest3 &bt) { return bt.a; }
+auto &get<0>(BindTest3 &bt) { return bt.a; }
 
 template<>
-auto& get<1>(BindTest3 &bt) { return bt.b;}
+auto &get<1>(BindTest3 &bt) { return bt.b; }
 
-int main()
-{
+int main() {
 	BindTest3 bt3;
-	auto& [x3, y3] = bt3;
+	auto &[x3, y3] = bt3;
 	x3 = 78;
+
 	std::cout << bt3.a << std::endl;
 }
