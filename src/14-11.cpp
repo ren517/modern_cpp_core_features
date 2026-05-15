@@ -1,6 +1,5 @@
 enum class Color1 : char {};
 
-int main()
-{
+int main(){
 	Color1 c{ 7.11 };
 }
